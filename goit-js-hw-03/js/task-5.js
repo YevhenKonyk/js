@@ -29,12 +29,8 @@ const getAllPropValues = (products, prop) => {
 	let propValues = [];
 
 	for (const product of products) {
-
-		for (const key in product) {
-			
-			if (key in product && key === prop) {
-				propValues.push(product[key]);
-			}
+		if (prop in product) {
+			propValues.push(product[prop]);
 		}
 	}
 
