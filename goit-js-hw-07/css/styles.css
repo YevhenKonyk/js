@@ -1,0 +1,32 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#categories {
+    outline: 1px solid #95a5a6;
+}
+
+.section-header {
+    display: inline;
+    background-color: #16a085;
+}
+
+section:not(:last-child) {
+    margin-bottom: 10px;
+}
