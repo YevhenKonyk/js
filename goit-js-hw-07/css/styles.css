@@ -45,3 +45,27 @@ section:not(:last-child) {
     height: 200px;
     border: 2px solid teal;
 }
+
+/* Task 4. Counter */
+#counter {
+    width: 300px;
+    outline: 1px solid tomato;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button[data-action="increment"] {
+    width: 100px;
+    height: 50px;
+  }
+
+  button[data-action="decrement"] {
+    width: 100px;
+    height: 50px;
+  }
+
+  #counter > #value {
+    font-size: 24px;
+  }
