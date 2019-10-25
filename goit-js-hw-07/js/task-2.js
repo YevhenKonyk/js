@@ -4,7 +4,7 @@
 // после чего вставит все li за одну операцию в список ul.ingredients. Для создания DOM-узлов 
 // используй document.createElement()
 
-const refs = {
+const prefs = {
     ingredientsList: document.querySelector('#ingredients')
 };
 
@@ -30,4 +30,4 @@ const fillListWithItems = (listItems, list) => {
     list.insertAdjacentHTML('afterbegin', listData);
 };
 
-fillListWithItems(ingredients, refs.ingredientsList);
+fillListWithItems(ingredients, prefs.ingredientsList);
