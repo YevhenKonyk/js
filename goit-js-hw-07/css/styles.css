@@ -69,3 +69,13 @@ section:not(:last-child) {
   #counter > #value {
     font-size: 24px;
   }
+
+  /* Task 6 */
+
+  #validation-input.valid {
+    outline: 3px solid #4caf50;
+  }
+
+  #validation-input.invalid {
+    outline: 3px solid #f44336;
+  }
