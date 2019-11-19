@@ -35,6 +35,7 @@ const account = {
 		};
 
     this.addTransaction(transaction);
+    this.balance += amount;
   },
 
   /*
@@ -46,13 +47,19 @@ const account = {
    */
 
   withdraw(amount) {
+    if (amount > this.balance) {
+      console.error('снятие такой суммы не возможно, недостаточно средств');
+      return;
+    }
+
     const transaction = {
 			id: 'wthdrw' + Math.random().toString(36).substr(2, 9),
 			type: Transaction.WITHDRAW,
-			amount: amount > this.balance ? 'снятие такой суммы не возможно, недостаточно средств' : amount,
+			amount: amount,
 		};
 
-		this.addTransaction(transaction);
+    this.addTransaction(transaction);
+    this.balance -= amount;
   },
 
   /*
@@ -100,5 +107,4 @@ const account = {
 
 console.log(account.deposit(100));
 console.log(account.getBalance());
-console.log(account.withdraw(10));
-
+console.log(account.withdraw(1000));
